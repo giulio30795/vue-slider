@@ -3,6 +3,7 @@
  */
 
 const app = new Vue ({
+    
     el : '#app',
     data: {
         slides: [
@@ -35,6 +36,9 @@ const app = new Vue ({
 
         activeSlide: 0,
     },
+
+created() {setInterval (() => this.nextSlide(), 2000)},
+
     methods: {
         nextSlide() {
             this.activeSlide ++;
@@ -51,5 +55,3 @@ const app = new Vue ({
         },
     },
 });
-
-
